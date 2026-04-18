@@ -1,1 +1,40 @@
+<!-- basic html document structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- set character encoding to utf8 -->
+  <meta charset="UTF-8" />
+  <!-- make layout responsive on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- page title shown on browser tab -->
+  <title>Mini ChatGPT Local</title>
+  <!-- link external stylesheet for styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- centered container for the app ui -->
+  <div class="box">
+    <!-- heading for the app -->
+    <h1>Mini ChatGPT Local 💬</h1>
 
+    <!-- textarea for user to type the question -->
+    <textarea id="q" placeholder="Ask me anything..."></textarea>
+
+    <!-- action buttons row -->
+    <div class="row">
+      <!-- button to send the question to the server -->
+      <button id="ask">Ask</button>
+      <!-- button to clear the text and output -->
+      <button class="ghost" id="clear">Clear</button>
+    </div>
+
+    <!-- small status line to show loading or errors -->
+    <div class="status" id="st"></div>
+    <!-- output area to print the answer from the model -->
+    <div class="out" id="out"></div>
+  </div>
+
+  <!-- load the client side javascript last so dom is ready -->
+  <script src="script.js"></script>
+</body>
+</html>
