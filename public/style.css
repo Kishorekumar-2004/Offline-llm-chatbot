@@ -1,0 +1,90 @@
+/* reset and base styles for full height centered layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif; /* clean readable font stack */
+  background: #0f172a; /* dark slate background */
+  color: #e5e7eb; /* light text for contrast */
+  display: flex; /* center horizontally and vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+/* card like container for the app */
+.box {
+  width: min(700px, 90vw); /* responsive width */
+  background: #111827; /* dark panel */
+  border: 1px solid #1f2937; /* subtle border */
+  border-radius: 16px; /* rounded corners */
+  padding: 20px; /* inside spacing */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* soft shadow */
+}
+
+/* heading style */
+h1 {
+  margin: 0 0 12px;
+  text-align: center; /* center heading */
+}
+
+/* textarea where user types the prompt */
+textarea {
+  width: 100%;
+  min-height: 100px; /* good typing area */
+  background: #0b1220; /* darker surface for input */
+  color: #e5e7eb; /* light text */
+  border: 1px solid #334155; /* subtle border */
+  border-radius: 10px; /* rounded corners */
+  padding: 10px; /* inner spacing */
+  font-size: 14px; /* readable size */
+  resize: vertical; /* allow height resize */
+}
+
+/* row to place buttons side by side with gap */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* main button style */
+button {
+  padding: 10px 16px; /* touch friendly size */
+  border: 0;
+  border-radius: 10px; /* rounded shape */
+  background: #3b82f6; /* blue action color */
+  color: #fff; /* white text */
+  font-weight: bold; /* strong label */
+  cursor: pointer; /* pointer cursor */
+  transition: 0.2s; /* smooth hover transition */
+}
+
+/* hover feedback for button */
+button:hover {
+  background: #2563eb; /* slightly darker blue */
+}
+
+/* secondary ghost button style */
+button.ghost {
+  background: transparent; /* see through */
+  border: 1px solid #334155; /* outline border */
+  color: #e5e7eb; /* light text */
+}
+
+/* answer output styles */
+.out {
+  margin-top: 10px;
+  white-space: pre-wrap; /* preserve line breaks */
+  background: #0b1220; /* same surface as input to match theme */
+  border: 1px solid #334155; /* subtle border */
+  padding: 12px; /* inner spacing */
+  border-radius: 10px; /* rounded corners */
+  min-height: 64px; /* keep box visible before answer arrives */
+}
+
+/* status text style */
+.status {
+  font-size: 12px; /* smaller text */
+  opacity: 0.8; /* lighter look */
+  margin-top: 6px; /* spacing above */
+  text-align: center; /* center align */
+}
